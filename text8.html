@@ -11,12 +11,12 @@
   <script>
     // 实现一个js节流函数throttle。
     function throttle(fn, gapTime) {
-      let _lastTime = null;
+      let lastTime = null;
       return function () {
-        let _nowTime = +new Date()
-        if (_nowTime - _lastTime > gapTime || !_lastTime) {
+        let nowTime = +new Date()
+        if (nowTime - lastTime > gapTime || !lastTime) {
           fn();
-          _lastTime = _nowTime
+          lastTime = nowTime
         }
       }
     }
