@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 请使用闭包的方式，写一段JS程序实现如下功能：函数每调用一次则该函数的返回值加1（注：要求使用ES6箭头函数实现）
+    function add() {
+      var i = 0;
+      add = function () {
+        return i++;
+      };
+      return i++;
+    }
+    console.log(add());
+    console.log(add());
+    console.log(add());
+    console.log(add());
+    console.log(add());
+  </script>
+</body>
+
+</html>
